@@ -15,6 +15,7 @@ const darkPalette = [
   "hsla(0, 15%, 93%, 1)",
   "hsla(0, 15%, 99%, 1)",
 ];
+
 const lightPalette = [
   "hsla(0, 15%, 99%, 1)",
   "hsla(0, 15%, 94%, 1)",
@@ -52,7 +53,6 @@ const darkShadows = {
 
 const builtThemes = createThemes({
   componentThemes: defaultComponentThemes,
-
   base: {
     palette: {
       dark: darkPalette,
@@ -161,8 +161,4 @@ export type Themes = typeof builtThemes;
 // back into JS for you, and the bundler plugins set TAMAGUI_ENVIRONMENT. so
 // long as you are using the Vite, Next, Webpack plugins this should just work,
 // but if not you can just export builtThemes directly as themes:
-export const themes: Themes =
-  process.env.TAMAGUI_ENVIRONMENT === "client" &&
-  process.env.NODE_ENV === "production"
-    ? ({} as any)
-    : (builtThemes as any);
+export const themes: Themes = builtThemes;

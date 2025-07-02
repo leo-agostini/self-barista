@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 
 import React from "react";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import { Header } from "./components/Header";
 import Home from "./screens/Home/Home";
 
 const Tab = createBottomTabNavigator();
@@ -27,6 +28,7 @@ export function Navigation() {
           },
           tabBarActiveTintColor: "tomato",
           tabBarInactiveTintColor: "gray",
+          header: () => <Header />,
         })}
       >
         <Tab.Screen name="Home" component={Home} />
