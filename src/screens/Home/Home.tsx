@@ -1,5 +1,5 @@
-import { Text } from "react-native";
+import RecentExtractions from "../../features/extractions/RecentExtractions";
 
 export default function Home() {
-  return <Text>Hello world</Text>;
+  return <RecentExtractions />;
 }

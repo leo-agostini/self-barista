@@ -47,7 +47,11 @@ export const BottomTabBar = ({ navigation, state }: BottomTabBarProps) => {
           <BottomNavigationTab
             key={title}
             title={title}
-            style={{ borderColor: `red`, outlineColor: "red" }}
+            style={{
+              borderColor: `red`,
+              outlineColor: "red",
+              paddingBottom: 24,
+            }}
             icon={
               <Icon
                 fill={isActive ? activeColor : inactiveColor}
